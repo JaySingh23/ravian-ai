@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, forwardRef } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; 
 import "../styles/particleBackground.css"
 
-const ParticleBackground = () => {
+const ParticleBackground = forwardRef((props, ref) => {
   const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
@@ -94,6 +94,7 @@ const ParticleBackground = () => {
     return (
       <Particles
         id="tsparticles"
+        ref = {ref}
         particlesLoaded={particlesLoaded}
         options={options}
         className="particles-background"
@@ -102,6 +103,8 @@ const ParticleBackground = () => {
   }
 
   return <></>;
-};
+});
+
+ParticleBackground.displayName = ParticleBackground;
 
 export default ParticleBackground;

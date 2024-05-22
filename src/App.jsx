@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   const navbarRef = useRef(null);
+  const particleRef = useRef(null);
   const comp = useRef(null);
   const servicesRef = useRef(null);
   const visionRef = useRef(null);
@@ -53,7 +54,11 @@ const App = () => {
         .from(navbarRef.current, {
           opacity: 0,
           duration: 0.5,
-        });
+        })
+        .from(particleRef.current, {
+          opacity: 0,
+          duration: 0.5
+        })
 
       gsap.fromTo(servicesRef.current.children, {
         opacity: 0,
@@ -81,7 +86,7 @@ const App = () => {
         stagger: 0.2,
         scrollTrigger: {
           trigger: visionRef.current,
-          start: "top 100%",
+          start: "top 95%",
           end: "bottom 70%",
           scrub: true,
         }
@@ -97,7 +102,7 @@ const App = () => {
         stagger: 0.2,
         scrollTrigger: {
           trigger: aboutRef.current,
-          start: "top 100%",
+          start: "top 95%",
           end: "bottom 70%",
           scrub: true,
         }
@@ -113,7 +118,7 @@ const App = () => {
         stagger: 0.2,
         scrollTrigger: {
           trigger: ctaRef.current,
-          start: "top 100%",
+          start: "top 95%",
           end: "bottom 70%",
           scrub: true,
         }
@@ -135,7 +140,7 @@ const App = () => {
         </h1>
       </div>
       <div className="h-screen bg-white">
-        <ParticleBackground />
+        <ParticleBackground ref={particleRef}/>
         <Navbar ref={navbarRef} id="navbar" />
         <div className="h-screen flex flex-col bg-black justify-center place-items-center z-1">
           <h1
@@ -150,7 +155,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="services-section bg-white pl-10 pr-10" ref={servicesRef}>
+      <div className="offerings-section bg-white pl-10 pr-10" ref={servicesRef}>
         <h1 className="text-8xl font-semibold text-white font-poppins">Our Offerings</h1>
         <div className="container mx-auto flex flex-row justify-around items-start gap-10 pt-10">
           <Atropos activeOffset={40}

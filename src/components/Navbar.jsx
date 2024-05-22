@@ -64,7 +64,7 @@ const Navbar = forwardRef((props, ref) => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 border-b-0 rounded-xl hover:bg-white duration-300 hover:text-black cursor-pointer border-gray-600'
+            className='p-4 border-b rounded-sm hover:bg-white duration-300 hover:text-black cursor-pointer border-gray-600'
           >
             <Link to={item.target} smooth={true} duration={500} onClick={handleNav}>{item.text}</Link>
           </li>

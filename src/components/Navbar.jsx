@@ -53,7 +53,7 @@ const Navbar = forwardRef((props, ref) => {
       <ul
         className={
           nav
-            ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 z-30' 
+            ? 'fixed md:hidden left-0 top-0 w-[70%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 z-30' 
             : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%] '
         }
       >
@@ -64,7 +64,7 @@ const Navbar = forwardRef((props, ref) => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 border-b rounded-xl hover:bg-white duration-300 hover:text-black cursor-pointer border-gray-600'
+            className='p-4 border-b-0 rounded-xl hover:bg-white duration-300 hover:text-black cursor-pointer border-gray-600'
           >
             <Link to={item.target} smooth={true} duration={500} onClick={handleNav}>{item.text}</Link>
           </li>

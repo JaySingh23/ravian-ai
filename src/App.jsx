@@ -183,7 +183,7 @@ const App = () => {
         <Atropos
           activeOffset={40}
           shadowScale={1.05}
-          className="w-full sm:w-1/2 my-atropos bg-gradient-to-r from-gray-950 p-10 rounded-lg transition duration-500 hover:shadow-xl hover:shadow-white cursor-pointer"
+          className="w-full sm:w-1/2 my-atropos bg-gradient-to-r from-gray-950 p-5 sm:p-10 rounded-lg transition duration-500 hover:shadow-xl hover:shadow-white cursor-pointer"
         >
           <div className="my-atropos-image rounded-lg" data-atropos-offset="5"></div>
           <h2 className="text-4xl font-bold mb-5 text-white align-center mt-5" data-atropos-offset="5">AI Data Analyst</h2>
@@ -192,7 +192,7 @@ const App = () => {
         <Atropos
           activeOffset={40}
           shadowScale={1.05}
-          className="w-full sm:w-1/2 my-atropos bg-gradient-to-r from-gray-950 p-10 rounded-lg transition duration-500 hover:shadow-xl hover:shadow-white cursor-pointer"
+          className="w-full sm:w-1/2 my-atropos bg-gradient-to-r from-gray-950 p-5 sm:p-10 rounded-lg transition duration-500 hover:shadow-xl hover:shadow-white cursor-pointer"
         >
           <div className="my-atropos-image-1 rounded-lg" data-atropos-offset="-5"></div>
           <h2 className="text-4xl font-bold mb-5 text-white align-center mt-5" data-atropos-offset="-5">Gen AI Vision Analyst</h2>

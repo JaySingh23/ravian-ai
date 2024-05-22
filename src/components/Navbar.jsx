@@ -1,6 +1,7 @@
 import { useState, forwardRef } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiFillPhone } from 'react-icons/ai';
 import { Link } from 'react-scroll';
+import '../styles/navbar.css'
 
 const Navbar = forwardRef((props, ref) => {
   // State to manage the navbar's visibility
@@ -64,7 +65,7 @@ const Navbar = forwardRef((props, ref) => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 border-b rounded-sm hover:bg-white duration-300 hover:text-black cursor-pointer border-gray-600'
+            className='p-4 rounded-sm hover:bg-white duration-300 hover:text-black cursor-pointer border-gray-600 itemm'
           >
             <Link to={item.target} smooth={true} duration={500} onClick={handleNav}>{item.text}</Link>
           </li>

@@ -1,0 +1,8 @@
+/* ParticlesBackground.css */
+.particles-background {
+  position: fixed;
+  width: 100vh;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
